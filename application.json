@@ -1,0 +1,4 @@
+{
+    "a" : "$input.params('a')",
+    "b" : "$input.params('b')"
+}
