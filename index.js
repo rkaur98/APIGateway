@@ -1,7 +1,7 @@
 exports.handler = (event, context, callback) => {
     // TODO implement
     
-    var a, b, sum, diff, prod, div, result;
+    var a, b, sum, diff, prod, div, result = new Array();
     
     a = Number(event.a);
     b = Number(event.b);
@@ -11,8 +11,12 @@ exports.handler = (event, context, callback) => {
     prod = a*b;
     div = a/b;
     
-    result = "Sum = "+sum+" Difference = "+diff+" Product = "+prod+" Division = "+div;
-    
+    result[0] = "a = "+a;
+    result[1] = "b = "+b;
+    result[2] = "Sum = "+sum;
+    result[3] = "Difference = "+diff;
+    result[4] = "Product = "+prod;
+    result[5] = "Division = "+div;
     
     callback(null, result);
     
